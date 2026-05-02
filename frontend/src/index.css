@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-50 text-surface-900 dark:bg-surface-950 dark:text-surface-100 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary-500/30;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400/50 dark:bg-primary-600/50 rounded-full hover:bg-primary-500/70;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-extrabold text-surface-900 dark:text-white mb-2 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-primary-500 dark:text-accent-400 font-semibold text-base mb-10 tracking-wide uppercase;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-lg shadow-black/5 dark:shadow-black/20;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:shadow-xl hover:shadow-primary-500/5 dark:hover:shadow-primary-500/10 hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-accent-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-hero {
+    @apply bg-gradient-to-r from-accent-300 via-primary-300 to-primary-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-accent-600 text-white px-7 py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500/50 dark:border-primary-400/40 text-primary-600 dark:text-primary-300 hover:bg-primary-600 hover:border-primary-600 hover:text-white px-7 py-3.5 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  .section-divider {
+    @apply w-16 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-8;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent-500/10 dark:bg-accent-400/10 text-accent-600 dark:text-accent-400;
+  }
+}
