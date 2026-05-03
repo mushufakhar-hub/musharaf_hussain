@@ -36,7 +36,9 @@ export default function Footer() {
               <Github size={18} />
             </a>
             <a
-              href="#"
+              href={profileData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 bg-surface-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
             >
               <Linkedin size={18} />

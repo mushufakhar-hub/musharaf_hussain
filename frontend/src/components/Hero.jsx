@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Download, ChevronDown, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Download, ChevronDown, MessageCircle, Linkedin } from 'lucide-react';
 import { profileData } from '../utils/data';
 
 export default function Hero() {
@@ -65,6 +65,15 @@ export default function Hero() {
               >
                 <MessageCircle size={16} className="text-emerald-400" />
                 {profileData.phone}
+              </a>
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/50 hover:text-blue-400 transition-colors"
+              >
+                <Linkedin size={16} className="text-blue-400" />
+                LinkedIn
               </a>
             </div>
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, MapPin, Calendar, Mail, Phone, Globe, Heart, BookOpen } from 'lucide-react';
+import { User, MapPin, Mail, Phone, Globe, Heart, BookOpen } from 'lucide-react';
 import { profileData, languagesData, hobbiesData } from '../utils/data';
 
 const fadeInUp = {
@@ -46,10 +46,6 @@ export default function About() {
               <div className="flex items-center gap-3 text-surface-600 dark:text-surface-300">
                 <MapPin size={18} className="text-primary-500 flex-shrink-0" />
                 <span>{profileData.location}</span>
-              </div>
-              <div className="flex items-center gap-3 text-surface-600 dark:text-surface-300">
-                <Calendar size={18} className="text-primary-500 flex-shrink-0" />
-                <span>Born {profileData.dob}</span>
               </div>
               <div className="flex items-center gap-3 text-surface-600 dark:text-surface-300">
                 <Mail size={18} className="text-primary-500 flex-shrink-0" />

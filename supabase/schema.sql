@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS profile (
   email VARCHAR(255) DEFAULT 'mushufakhar@gmail.com',
   phone VARCHAR(50) DEFAULT '+923554464192',
   location VARCHAR(255) DEFAULT 'Skardu, Gilgit-Baltistan, Pakistan',
-  dob VARCHAR(100) DEFAULT 'January 1, 2004',
+  linkedin VARCHAR(500) DEFAULT 'https://linkedin.com/in/musharaf-hussain-7a054124a',
   profile TEXT DEFAULT 'Experienced receptionist skilled in managing communication channels and providing excellent customer service. Strong multitasking and professionalism.',
   hero_title VARCHAR(255) DEFAULT 'Receptionist & Aspiring Business Professional',
   resume_url VARCHAR(500) DEFAULT '/resume.pdf',
@@ -100,14 +100,14 @@ CREATE POLICY "Admin manage users" ON users FOR ALL TO authenticated USING (true
 -- =============================================
 
 -- Insert default profile
-INSERT INTO profile (id, name, email, phone, location, dob, profile, hero_title)
+INSERT INTO profile (id, name, email, phone, location, linkedin, profile, hero_title)
 VALUES (
   1,
   'Musharaf Hussain',
   'mushufakhar@gmail.com',
   '+923554464192',
   'Skardu, Gilgit-Baltistan, Pakistan',
-  'January 1, 2004',
+  'https://linkedin.com/in/musharaf-hussain-7a054124a',
   'Experienced receptionist skilled in managing communication channels and providing excellent customer service. Strong multitasking and professionalism.',
   'Receptionist & Aspiring Business Professional'
 ) ON CONFLICT (id) DO NOTHING;

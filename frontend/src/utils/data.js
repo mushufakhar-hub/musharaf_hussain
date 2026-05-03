@@ -4,8 +4,8 @@ const profileData = {
   email: 'mushufakhar@gmail.com',
   phone: '+923183650531',
   whatsapp: 'https://wa.me/923183650531',
+  linkedin: 'https://linkedin.com/in/musharaf-hussain-7a054124a',
   location: 'Skardu, Gilgit-Baltistan, Pakistan',
-  dob: 'January 1, 2004',
   profile:
     'Experienced receptionist skilled in managing communication channels and providing excellent customer service. Strong multitasking and professionalism.',
   heroTitle: 'Receptionist & Aspiring Business Professional',
