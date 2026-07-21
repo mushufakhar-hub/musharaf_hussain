@@ -42,19 +42,19 @@ export default function Projects({ projects }) {
                 className="glass-card-hover overflow-hidden group"
               >
                 {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-primary-500 to-accent-600 overflow-hidden">
+                <div className="relative h-200 w-full overflow-hidden bg-slate-350 p-6">
                   {project.image_url ? (
                     <img
                       src={project.image_url}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="flex h-full w-full items-center justify-center">
                       <Folder size={48} className="text-white/50" />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
 
                 {/* Content */}
@@ -78,6 +78,17 @@ export default function Projects({ projects }) {
                         </span>
                       ))}
                     </div>
+                  )}
+
+                  {project.features && project.features.length > 0 && (
+                    <ul className="mb-4 space-y-1.5 text-sm text-surface-600 dark:text-surface-300">
+                      {project.features.slice(0, 3).map((feature) => (
+                        <li key={feature} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary-500" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
 
                   {/* Links */}

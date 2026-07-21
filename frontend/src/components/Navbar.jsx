@@ -79,17 +79,6 @@ export default function Navbar() {
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
 
-            <Link
-              to="/admin/login"
-              className={`hidden md:inline-flex text-xs font-medium transition-colors ${
-                scrolled
-                  ? 'text-surface-400 dark:text-surface-500 hover:text-primary-600 dark:hover:text-primary-400'
-                  : 'text-white/40 hover:text-white/70'
-              }`}
-            >
-              Admin
-            </Link>
-
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -120,13 +109,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link
-              to="/admin/login"
-              onClick={handleClick}
-              className="block px-3 py-2 text-sm font-medium text-surface-400 dark:text-surface-500 hover:text-primary-600"
-            >
-              Admin Panel
-            </Link>
           </div>
         </div>
       )}

@@ -7,63 +7,40 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-surface-950 text-surface-400 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Left */}
+    <footer className="bg-surface-950 py-12 text-surface-400">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center shadow-lg shadow-primary-500/30">
-                <span className="text-white font-bold text-xs">MH</span>
+            <div className="mb-2 flex items-center gap-2.5">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg shadow-primary-500/30">
+                <span className="text-xs font-bold text-white">MH</span>
               </div>
               <span className="font-bold text-white">Musharaf Hussain</span>
             </div>
-            <p className="text-sm text-surface-300">Receptionist & Aspiring Business Professional</p>
+            <p className="text-sm text-surface-300">Full Stack Developer | Generative AI Engineer</p>
           </div>
 
-          {/* Center - Social */}
           <div className="flex items-center gap-3">
-            <a
-              href="mailto:mushufakhar@gmail.com"
-              className="w-10 h-10 bg-surface-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-            >
+            <a href={`mailto:${profileData.email}`} className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600">
               <Mail size={18} />
             </a>
-            <a
-              href="#"
-              className="w-10 h-10 bg-surface-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-            >
+            <a href={profileData.github} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600">
               <Github size={18} />
             </a>
-            <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 bg-surface-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-            >
+            <a href={profileData.linkedin} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600">
               <Linkedin size={18} />
             </a>
-            <a
-              href={profileData.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 bg-surface-800 hover:bg-emerald-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-            >
+            <a href={profileData.whatsapp} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-600">
               <MessageCircle size={18} />
             </a>
           </div>
 
-          {/* Right */}
-          <button
-            onClick={scrollToTop}
-            className="w-10 h-10 bg-surface-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
-            aria-label="Scroll to top"
-          >
+          <button onClick={scrollToTop} className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600" aria-label="Scroll to top">
             <ArrowUp size={18} />
           </button>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-surface-800 text-center text-sm">
+        <div className="mt-8 border-t border-surface-800 pt-8 text-center text-sm">
           <p className="flex items-center justify-center gap-1 text-surface-300">
             Made with <Heart size={14} className="text-red-500" /> by Musharaf Hussain
           </p>

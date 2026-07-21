@@ -10,10 +10,10 @@ import Courses from '../components/Courses';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { projectsAPI, skillsAPI } from '../utils/api';
-import { defaultSkills } from '../utils/data';
+import { defaultSkills, projectData } from '../utils/data';
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(projectData);
   const [skills, setSkills] = useState(defaultSkills);
   const [loading, setLoading] = useState(true);
 
